@@ -1,5 +1,6 @@
 interface User {
   id: string;
+  email: string;
   firstName: string;
   lastName: string;
   dni: string;
@@ -7,4 +8,16 @@ interface User {
   emergencyContact: string;
 }
 
-export default User;
+type UserKeys = keyof User;
+
+const emptyUser: User = {
+  id: "",
+  email: "",
+  firstName: "",
+  lastName: "",
+  dni: "",
+  contact: "",
+  emergencyContact: "",
+};
+
+export { User, emptyUser, UserKeys };
