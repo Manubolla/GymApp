@@ -23,7 +23,12 @@ module.exports = function (api) {
           unsafe: true,
         },
       ],
-      [require.resolve("babel-plugin-module-resolver"), { root: ["./src"] }],
+      [
+        "module-resolver",
+        {
+          root: [".src/"],
+        },
+      ],
     ],
   };
 };
