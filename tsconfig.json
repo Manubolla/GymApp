@@ -1,7 +1,13 @@
 {
   "compilerOptions": {
     "strict": true,
-    "module": "es6"
+    "module": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "src/*"
+      ],
+    }
   },
   "extends": "expo/tsconfig.base"
 }

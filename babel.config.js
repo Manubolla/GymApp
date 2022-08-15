@@ -17,10 +17,13 @@ module.exports = function (api) {
   return {
     presets: ["babel-preset-expo"],
     plugins: [
-      "inline-dotenv",
-      {
-        unsafe: true,
-      },
+      [
+        "inline-dotenv",
+        {
+          unsafe: true,
+        },
+      ],
+      [require.resolve("babel-plugin-module-resolver"), { root: ["./src"] }],
     ],
   };
 };
