@@ -1,17 +1,12 @@
+import RootNavigation from "navigation/RootNavigation";
 import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "screens/HomeScreen";
-
-const Stack = createNativeStackNavigator();
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <RootNavigation />
+    </SafeAreaProvider>
   );
 }
 export default App;
